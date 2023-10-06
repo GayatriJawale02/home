@@ -1,0 +1,18 @@
+Q1
+
+
+Solution:
+root@dbda-H510:/home/dbda# docker run -d httpd
+86ad8761f805e7dc2055bcdf6e6c0742bfa369276ed3307bdc217910b65e2356
+root@dbda-H510:/home/dbda# docker run -d --name "blue" -p 38282:80
+"docker run" requires at least 1 argument.
+See 'docker run --help'.
+
+Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+
+Create and run a new container from an image
+root@dbda-H510:/home/dbda# docker run -d --name "blue" -p 38282:80 httpd
+018ef3ccda2ddc4d5e10f8d17336faeda1953e39e4128a366a29b18a9783f56c
+root@dbda-H510:/home/dbda# 
+
+************************************************************************************

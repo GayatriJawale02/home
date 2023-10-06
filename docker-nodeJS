@@ -1,0 +1,36 @@
+root@dbda-H510:/home/dbda# mkdir node1
+root@dbda-H510:/home/dbda# cd node1
+root@dbda-H510:/home/dbda/node1# vim app.js
+root@dbda-H510:/home/dbda/node1# vim Dockerfile
+root@dbda-H510:/home/dbda/node1# docker build . -t gayatri:latest
+DEPRECATED: The legacy builder is deprecated and will be removed in a future release.
+            Install the buildx component to build images with BuildKit:
+            https://docs.docker.com/go/buildx/
+
+Sending build context to Docker daemon  3.072kB
+Step 1/5 : FROM mhart/alpine-node:4.4
+4.4: Pulling from mhart/alpine-node
+e110a4a17941: Pull complete 
+3b8af7884faf: Pull complete 
+Digest: sha256:a075764c7d1f45d3efeace02d106b5e9cec4409fb489f99b8c69a429d37e4666
+Status: Downloaded newer image for mhart/alpine-node:4.4
+ ---> 415a62aa1960
+Step 2/5 : COPY ./app.js /mnt
+ ---> da327b0f828f
+Step 3/5 : EXPOSE 9000:9000
+ ---> Running in 7740eb494708
+Removing intermediate container 7740eb494708
+ ---> 173c01fc8abd
+Step 4/5 : WORKDIR /mnt
+ ---> Running in aa2d0926588b
+Removing intermediate container aa2d0926588b
+ ---> e6673cf84047
+Step 5/5 : ENTRYPOINT ["/usr/bin/node","app.js"]
+ ---> Running in 4a3026ad1009
+Removing intermediate container 4a3026ad1009
+ ---> a70eb2f00279
+Successfully built a70eb2f00279
+Successfully tagged gayatri:latest
+root@dbda-H510:/home/dbda/node1# docker run -d gayatri:latest
+095eed685e893e9ade8cef898ee1c269f35f0cc1aa4c15cc084a699d68a9e6f5
+
