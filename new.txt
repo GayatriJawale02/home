@@ -1,3 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FROM mhart/alpine-node4.4
+
+COPY ./app.js /mnt
+EXPOSE 9000:9000
+WORKDIR /mnt
+ENTRYPOINT ["path","app.js"]
+
+docker build . -t gayatri:latest
+docker run 
+
+python3 app.py flask run --host= 0.0.0.0
+
+
+docker run -d https --name "abc" host: client
+
+
+vin docker-compose.yml
+services:
+   redisdb:
+       image
+        ports
+        volumes
+
+docker-compose up
+
+
+pull jenkins
+-p port1 -p port2
+
+
+
+domain=$1
+wordlist=$2
+
+while read sub:do
+   if host "$sub.$domain";
+   then
+      echo"$sub.$domain:alive";
+   fi
+done < $wordlist 
+
+
 apt install vsftpd
 systemctl ststus/start vsftpd
 lsof -i:21
