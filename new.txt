@@ -1,0 +1,36 @@
+apt install vsftpd
+systemctl ststus/start vsftpd
+lsof -i:21
+#vim /etc/vsftpd.conf
+	change anonymous.enable = yes
+systemctl restatrt vdftpd
+
+*** client ***
+install ftp 
+ftp x.x.x.x //server ip
+user:ftp
+pss:enter
+fts>ls
+ftp> put,get,mput,mget
+
+
+
+
+mkdir abc
+cd abc
+git init .
+ls -a
+ls .git/
+git clone
+git config --global user.name/email //--list/-l
+#git log
+git log --pretty=oneline
+git branch new
+git add .
+git commit -m "commited"
+
+git checkout main
+git merge new
+
+ceate token
+git push -u origin main
